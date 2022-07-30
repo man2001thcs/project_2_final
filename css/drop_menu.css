@@ -1,0 +1,134 @@
+#dropmenu {
+    text-align: center;
+    height: 42px;
+    float: left;
+    list-style-type: none;
+    min-width: 1000px !important;
+    padding: 0% 7%;
+    background: rgb(36, 37, 38, 0.85);
+}
+
+#dropmenu li {
+    position: relative;
+    width: 15%;
+    float: left;
+    margin: 0;
+    text-align: center;
+    border: 1px solid rgb(161, 161, 161);
+    border-left: none;
+}
+
+#dropmenu li:first-child {
+    border-left: 1px solid #A1A1A1;
+}
+
+#dropmenu li a {
+    display: table-cell;
+    min-width: 100px;
+    width: 10%;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 120%;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#dropmenu li a span.mojiicon {
+    font-size: 160%;
+}
+
+#dropmenu li a:hover,
+#dropmenu li.active a {
+    background: #1a00af;
+    color: #fff;
+}
+
+#dropmenu li ul {
+    list-style: none;
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#dropmenu li ul li {
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    transition: .2s;
+    border: none !important;
+}
+
+#dropmenu li ul li a {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 11px;
+    text-align: left;
+    transition: all .3s ease-in-out;
+    background: rgb(242, 156, 87);
+    color: #fff;
+}
+
+#dropmenu>li:hover>a {
+    background: rgb(243, 158, 89, 0.8);
+    color: #fff;
+}
+
+#dropmenu>li:hover li:hover>a {
+    background: rgb(255, 115, 0);
+    color: #fff;
+}
+
+#dropmenu li:hover>ul>li {
+    overflow: visible;
+    height: 35px;
+}
+
+#dropmenu li ul li ul {
+    top: 0;
+    left: 100%;
+}
+
+#dropmenu li:last-child ul li ul {
+    left: -100%;
+    width: 100%;
+}
+
+#dropmenu li ul li ul li a {
+    width: auto;
+    background: #960;
+    color: #fff;
+}
+
+#dropmenu li:hover ul li ul li:hover>a {
+    background: #bea43a;
+    color: #fff;
+}
+
+#dropmenu li ul li ul:before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-left-color: #fff;
+}
+
+#dropmenu li:last-child ul li ul:before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    left: 200%;
+    margin-left: -20px;
+    border: 5px solid transparent;
+    border-right-color: #fff;
+}
